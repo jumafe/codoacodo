@@ -22,6 +22,9 @@
   <link href="css/style.css" rel="stylesheet" />
  
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <script SRC="js/ValidarContacto.js" LANGUAGE="javascript"></script>
+
 </head>
 
 <body class="sub_page">
@@ -77,23 +80,24 @@
             CONTACTANOS
           </h2>
         </div>
-        <form action="">
+        <form name="fvalida" method="POST" >
           <div>
-            <input type="text" placeholder="Nombre" />
+             <input type="text" id="nombre" placeholder="nombre" >
           </div>
           <div>
-            <input type="email" placeholder="Email"/>
+            <input type="email" id="email" placeholder="Email"/>
           </div>
           <div>
-            <input type="number" placeholder="Teléfono" />
+            <input type="number" id="telefono" placeholder="Teléfono" />
           </div>
           <div>
-            <input type="text" class="message-box" placeholder="Mensaje" />
+            <input type="text" id="mensaje" class="message-box" placeholder="Mensaje" />
           </div>
           <div class="d-flex justify-content-center mt-4 ">
-            <button>
-              ENVIAR
-            </button>
+            <!--<button>
+                 value="Enviar" onclick="validarform()"
+            </button> -->
+            <input name="Submit" type="button"  value="Enviar" onClick="validarform()">
           </div>
         </form>
       </div>
