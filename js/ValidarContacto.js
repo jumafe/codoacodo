@@ -34,5 +34,6 @@ if (document.fvalida.mensaje.value.length==0){
 
 alert("Muchas gracias por enviar el formulario");
 document.fvalida.submit();
+location.reload();
  
 }
