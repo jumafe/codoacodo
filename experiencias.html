@@ -23,6 +23,11 @@
   <link href="css/style.css" rel="stylesheet" />
   
   <link href="css/responsive.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 
 <body class="sub_page">
@@ -79,8 +84,7 @@
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+       
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -88,49 +92,33 @@
         
               <div class="detail_box">
                 
-                <p>
-                  Mi #ExperienciaBeautySkin fue y es genial. No sólo cambié mi aspecto físico, aprendí a valorarme y cambiar hábitos, 
-                  entre otras buenas cosas que a veces no sabemos que nos hacen tan bien. 
-                  No sólo te ves mejor por fuera sino interiormente, que eso es muy importante también, porque sólo vos lo ves y sentís. 
-                  Por eso estoy eternamente agradecida a Beauty Skin, a todas las profes que cada en sesión te apoyan y te dan la fuerza para continuar, 
-                  y a Gise que fue el punto clave con su explicación cuando fuí por primera vez... Gracias BS por existir ❤
-                </p>
+                <main>
+                  <div id="app" class="container">
+                          <section v-if="cargando">
+                              <div class="spinner-border"></div>
+                              <p>Cargando...</p>
+                          </section>
+                          <section>
+                              <div class="table table-responsive">
+                                  <table class="detail_box">
+                                      <tbody>
+                                          <!-- Iterar sobre cada producto -->
+                                          <tr class="" v-for="experiencia in experiencias">
+                                              <td>{{experiencia.comentario}}</td>
+                                            </tr>
+                                  </tbody>
+                                   </table>
+                              </div>
+                          </section>
+                      </div>
+                  </div>
+              </main>
               </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="client_container layout_padding">
-        
-              <div class="detail_box">
-                
-                <p>
-                  Llegué a Beauty Skin hace 3 años, básicamente buscando hacer algo para modelar y bajar de peso.
-                  Si bien cumplí ya esos objetivos, hoy Figurella es para mí mucho más que un espacio de ejercicio, 
-                  es MI espacio en el cual encuentro momentos placenteros, desestresantes, sumé amigas... 
-                  Todo eso hace de Beauty Skin un espacio perfecto y necesario en mi rutina.
-                  Además, la atención de Olga y de Mónica es sumamente importante en ese SENTIRSE TAN A GUSTO ALLÍ
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="client_container layout_padding">
-       
-              <div class="detail_box">
-               
-                <p>
-                  Venir a Beauty Skin es mi momento personal del día.
-                  El cambio es increíble!! Si seguís tu rutina y los consejos que te dan modelás a full. 
-                  Las profes son lo más... Me alegran las mañanas!!
-                </p>
-              </div>
-            </div>
           </div>
         </div>
-
       </div>
-
-    </div>
   </section>
 
   <section class="info_section layout_padding">
@@ -188,10 +176,20 @@
    
     </p>
   </section>
-  
-
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+ 
+     <!-- Enlace de Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+     crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+     crossorigin="anonymous"></script>
+ <script src="./js/main.js"></script>
+ <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Enlace de VUE-->
+ <script src="./js/experiencias.js"></script>
+ 
 </body>
 
 </html>

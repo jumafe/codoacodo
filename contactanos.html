@@ -80,23 +80,22 @@
             CONTACTANOS
           </h2>
         </div>
-        <form id=form name="fvalida" action="https://formspree.io/f/meqwdbkk" method="POST" onsubmit="return validarform ()"">
+        <form id=form name="form" action="https://formspree.io/f/meqwdbkk" method="POST">
           <div>
-            <input type="text" name="name" placeholder="nombre"> 
+            <input type="text" name="name" placeholder="nombre" required> 
           </div>
           <div>
-           <input type="email" name="_replyto" placeholder="Email">
+           <input type="email" name="_replyto" placeholder="Email" required>
           </div>
           <div>
-            <input type="number" name="telefono" placeholder="Teléfono">
+            <input type="number" name="telefono" placeholder="Teléfono" required>
             
           </div>
           <div>
-            <input type="mensaje" name="mensaje" class="message-box" placeholder="Mensaje">
+            <input type="mensaje" name="mensaje" class="message-box" placeholder="Mensaje" required>
           </div>
           <div class="d-flex justify-content-center mt-4 ">
           <button type="submit" class="btn btn-primary mb-2">Enviar</button>
-          <!--VALIDA <input name="Submit" type="button"  value="Enviar" onClick="validarform()">-->
         </div>
         </form>
       </div>
